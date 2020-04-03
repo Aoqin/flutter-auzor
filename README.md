@@ -4,7 +4,7 @@ flutter 测试项目
 
 ## 目录结构  
 
-|—— lib
+|—— lib  
 |—— |— components  
 |—— test  
 
