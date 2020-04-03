@@ -1,16 +1,54 @@
 # auzor
 
-A new Flutter project.
+flutter 测试项目
 
-## Getting Started
+## 目录结构  
 
-This project is a starting point for a Flutter application.
+|—— lib
+|—— |— components  
+|—— test  
 
-A few resources to get you started if this is your first Flutter project:
+## 注意事项
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+> flutter pub get 安装包依赖卡住时请将android/build.gradle 修改如下代码  
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+``` buildscript {
+    ext.kotlin_version = '1.3.50'
+    repositories {
+        // google()
+        // jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        // google()
+        // jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    }
+} ```  
+
+> 同时修改flutter/flutter/packages/flutter_tools/gradle
+
+``` buildscript {
+    repositories {
+        //google()
+        //jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}  ```
