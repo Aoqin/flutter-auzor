@@ -21,8 +21,7 @@ buildscript {
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
-    }
-
+    }\n
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -40,8 +39,8 @@ allprojects {
 }  
 `
   
-> 同时修改flutter/flutter/packages/flutter_tools/gradle
-
+> 同时修改flutter/flutter/packages/flutter_tools/gradle  
+  
 `  
 buildscript {
     repositories {
