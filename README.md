@@ -12,7 +12,8 @@ flutter 测试项目
 
 > flutter pub get 安装包依赖卡住时请将android/build.gradle 修改如下代码  
 
-`buildscript {
+`  
+buildscript {
     ext.kotlin_version = '1.3.50'
     repositories {
         // google()
@@ -36,11 +37,13 @@ allprojects {
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
     }
-} `
+}  
+`
   
 > 同时修改flutter/flutter/packages/flutter_tools/gradle
 
-`buildscript {
+`  
+buildscript {
     repositories {
         //google()
         //jcenter()
@@ -51,4 +54,5 @@ allprojects {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
     }
-}`
+}  
+`
